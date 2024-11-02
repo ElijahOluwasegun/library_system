@@ -46,7 +46,7 @@
             </div>
             <div class="input-group">
                 <label for="">Book Created by: </label>
-                <input type="text" name="book_createdby" required>
+                <input type="number" name="book_createdby" required>
             </div>
         </div>
         <!-- <div class="outside-input-group">
