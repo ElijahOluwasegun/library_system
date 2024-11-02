@@ -15,7 +15,7 @@
     <form action="InsertBooks.php" method="post" autocomplete="on">
         <div class="outside-input-group">
             <div class="input-group">
-                <label class="staffn" for="">Book Number:</label>
+                <label class="bookn" for="">Book Number:</label>
                 <input type="text" name="Bookno" required>
             </div>
         </div>
