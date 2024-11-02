@@ -43,7 +43,7 @@
                 <input type="number" name="Book_quantity" required>
             </div>
         </div>
-        <div class="outside-input-group">
+        <!-- <div class="outside-input-group">
             <div class="input-group">
                 <label for="">Category:</label>
                 <select name="Cadre" id="" required>
@@ -52,7 +52,7 @@
                     <option value="Manager">Manager</option>
                     <option value="Waiter">Waiter</option>
                 </select>
-            </div>
+            </div> -->
         </div>
         <div class="btn">
             <button type="submit" name="Save">Submit Book Details</button>
