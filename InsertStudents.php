@@ -15,7 +15,7 @@ if (isset($_POST['Save']))
     // Step 2 : Connect to the database
     include("configurations/connect.php");
     // Step 3 : Write the SQL Command
-    $stmt = $conn->prepare("INSERT INTO staff (Studentno, Firstname, Lastname, email, phoneno, programme_code, book_createdby)
+    $stmt = $conn->prepare("INSERT INTO students (Studentno, Firstname, Lastname, email, phoneno, programme_code, book_createdby)
     VALUES (:s, :f, :l, :e, :p, :u)");
     $stmt->bindParam(':s', $StudNo);
     $stmt->bindParam(':f', $FN);
