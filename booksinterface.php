@@ -16,31 +16,31 @@
         <div class="outside-input-group">
             <div class="input-group">
                 <label class="bookn" for="">Book Number:</label>
-                <input type="text" name="Bookno" required>
+                <input type="text" name="bookno" required>
             </div>
         </div>
             <div class="outside-input-group">
                 <div class="input-group">
                     <label for="">Book Title:</label>
-                    <input type="text" name="Title" required>
+                    <input type="text" name="title" required>
                 </div>
                 <div class="input-group">
                     <label for="">Book Subtitle:</label>
-                    <input type="text" name="Subtitle">
+                    <input type="text" name="subtitle">
                 </div>
             </div>  
         <div class="outside-input-group">
             <div class="input-group">
                 <label for="">Author Name: </label>
-                <input type="text" name="Author" required>
+                <input type="text" name="author" required>
             </div>
             <div class="input-group">
                 <label for="">Book Publisher:</label>
-                <input type="text" name="Book_publisher" required>
+                <input type="text" name="book_publisher" required>
             </div>
             <div class="input-group">
                 <label for="">Book Quantity:</label>
-                <input type="number" name="Book_quantity" required>
+                <input type="number" name="book_quantity" required>
             </div>
         </div>
         <!-- <div class="outside-input-group">
