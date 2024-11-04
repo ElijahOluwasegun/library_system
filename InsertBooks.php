@@ -10,7 +10,7 @@ if (isset($_POST['Save']))
     $Bq = $_POST['Book_quantity'];
 
 
-    //echo $FN. " ". $LN;
+    //echo $BNo. " ". $Te;
 
 
     // Step 2 : Connect to the database
