@@ -16,17 +16,17 @@
         <div class="outside-input-group">
             <div class="input-group">
                 <label class="stno" for="">Student Number:</label>
-                <input type="text" name="Studentno" required>
+                <input type="text" name="studentno" required>
             </div>
         </div>
             <div class="outside-input-group">
                 <div class="input-group">
                     <label for="">First Name:</label>
-                    <input type="text" name="Firstname" required>
+                    <input type="text" name="firstname" required>
                 </div>
                 <div class="input-group">
                     <label for="">Last Name:</label>
-                    <input type="text" name="Lastname" required>
+                    <input type="text" name="lastname" required>
                 </div>
             </div>  
         <div class="outside-input-group">

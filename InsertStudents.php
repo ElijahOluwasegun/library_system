@@ -2,9 +2,9 @@
 // Step 1: Get Data from the Form [Frontend]
 if (isset($_POST['Save']))
 {
-    $StudNo = $_POST['Studentno'];
-    $FN = $_POST['Firstname'];
-    $LN = $_POST['Lastname'];
+    $StudNo = $_POST['studentno'];
+    $FN = $_POST['firstname'];
+    $LN = $_POST['lastname'];
     $E = $_POST['email'];
     $P = $_POST['phoneno'];
     $Cp = $_POST['programme_code'];
@@ -15,7 +15,7 @@ if (isset($_POST['Save']))
     // Step 2 : Connect to the database
     include("configurations/connect.php");
     // Step 3 : Write the SQL Command
-    $stmt = $conn->prepare("INSERT INTO students (Studentno, Firstname, Lastname, email, phoneno, programme_code, book_createdby)
+    $stmt = $conn->prepare("INSERT INTO students (studentno, firstname, lastname, email, phoneno, programme_code, book_createdby)
     VALUES (:s, :f, :l, :e, :p, :u)");
     $stmt->bindParam(':s', $StudNo);
     $stmt->bindParam(':f', $FN);
