@@ -12,9 +12,6 @@ if (isset($_POST['Save']))
     $Bq = $_POST['book_quantity'];
 
 
-    //echo $BNo. " ". $Te;
-
-
     // Step 2 : Connect to the database
     include("configurations/connect.php");
     // Step 3 : Write the SQL Command
@@ -31,6 +28,7 @@ if (isset($_POST['Save']))
     {
         echo "Book Details Successfully Saved";
     }
+    include 'view_books.php';
 }
 
 

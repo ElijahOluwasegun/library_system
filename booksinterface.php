@@ -12,13 +12,6 @@
 </head>
 <body>
     <h1 class="header">Enter Book Details: </h1>
-    <div>
-            <form action="view_books.php" method="post" >
-                <div class="btn">
-                    <button type="submit"> View Book Details</button>
-                </div>
-            </form>
-        </div>
     <form action="InsertBooks.php" method="post" autocomplete="on">
         <div class="outside-input-group">
             <div class="input-group">
@@ -64,8 +57,6 @@
         <div class="btn">
             <button type="submit" name="Save">Submit Book Details</button>
         </div>
-        <!-- View book library: -->
-       
     </form>
 </body>
 </html>
