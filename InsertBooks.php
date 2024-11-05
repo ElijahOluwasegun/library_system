@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 // Step 1: Get Data from the Form [Frontend]
 if (isset($_POST['Save']))
 {
