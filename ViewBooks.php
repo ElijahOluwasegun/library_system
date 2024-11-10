@@ -56,7 +56,7 @@ $result = $conn->query($sql);
         <a href="booksinterface.php">Add New Book</a>
     </p>
     <p>
-        <a href="booksinterface.php">Edit Book Information</a>
+        <a href="EditBooks.php">Edit Book Information</a>
     </p>
     <p>
         <a href="booksinterface.php">Delete Books</a>
