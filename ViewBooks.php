@@ -5,7 +5,7 @@ $username = "root"; // Default XAMPP username
 $password = ""; // Default XAMPP password
 $dbname = "library_system"; // Replace with your database name
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
 // Check the connection
 if ($conn->connect_error) {
@@ -14,7 +14,9 @@ if ($conn->connect_error) {
 
 // Fetch data from the books table
 $sql = "SELECT id, bookno, title, subtitle, author, book_publisher, book_quantity FROM books";
-$result = $conn->query($sql);
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$books = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -23,8 +25,8 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <title>Books List</title>
     <style>
-        /* Add some basic styling */
-        table { width: 50%; margin: auto; border-collapse: collapse; }
+        /* Basic styling */
+        table { width: 80%; margin: auto; border-collapse: collapse; }
         th, td { padding: 8px 12px; border: 1px solid #ddd; text-align: center; }
         th { background-color: #f4f4f4; }
     </style>
@@ -40,27 +42,24 @@ $result = $conn->query($sql);
             <th>Author</th>
             <th>Book Publisher</th>
             <th>Book Quantity</th>
+            <th>Actions</th>
         </tr>
-        <?php
-        if ($result->num_rows > 0) {
-            // Display each book's data
-            while($row = $result->fetch_assoc()) {
-                echo "<tr><td>" . $row["id"] . "</td><td>" . $row["bookno"] . "</td><td>" . $row["title"] . "</td><td>" . $row["subtitle"] . "</td><td>" . $row["author"] . "</td><td>" . $row["book_publisher"] . "</td><td>" . $row["book_quantity"] . "</td></tr>";
-            }
-        } else {
-            echo "<tr><td colspan='2'>No books available</td></tr>";
-        }
-        ?>
+        <?php foreach ($books as $book): ?>
+            <tr>
+                <td><?= htmlspecialchars($book['id']) ?></td>
+                <td><?= htmlspecialchars($book['bookno']) ?></td>
+                <td><?= htmlspecialchars($book['title']) ?></td>
+                <td><?= htmlspecialchars($book['subtitle']) ?></td>
+                <td><?= htmlspecialchars($book['author']) ?></td>
+                <td><?= htmlspecialchars($book['book_publisher']) ?></td>
+                <td><?= htmlspecialchars($book['book_quantity']) ?></td>
+                <td>
+                    <a href="EditBooks.php?id=<?= htmlspecialchars($book['id']) ?>">Edit</a> |
+                    <a href="DeleteBooks.php?id=<?= htmlspecialchars($book['id']) ?>" onclick="return confirm('Are you sure you want to delete this book?');">Delete</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
     </table>
-    <p>
-        <a href="booksinterface.php">Add New Book</a>
-    </p>
-    <p>
-        <a href="EditBooks.php">Edit Book Information</a>
-    </p>
-    <p>
-        <a href="booksinterface.php">Delete Books</a>
-    </p>
 </body>
 </html>
 

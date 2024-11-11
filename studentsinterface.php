@@ -12,6 +12,7 @@
 </head>
 <body>
     <h1 class="header">Enter Student Details: </h1>
+    <p>To use book records, one must first enter your student details if you student details exist, click the view button to check.</p>
     <form action="InsertStudents.php" method="post" autocomplete="on">
         <div class="outside-input-group">
             <div class="input-group">
